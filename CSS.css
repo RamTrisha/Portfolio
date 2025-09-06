@@ -1,0 +1,118 @@
+.QHC{
+/* Styles de base */
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+/* Titre principal */
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+/* Bouton stylé */
+button.click {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Effet hover sur le bouton */
+button.click:hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+/* Effet de clic */
+button.click:active {
+  background-color: #3e8e41;
+  transform: scale(1);
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  button.click {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+}
+
+.Q{
+/* Style général du body */
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+/* Style du titre de la question */
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Style des boutons de réponse */
+button.click {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 10px;
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Effet hover sur les boutons */
+button.click:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+/* Effet de clic */
+button.click:active {
+  background-color: #3e8e41;
+  transform: translateY(1px);
+}
+
+/* Responsive pour mobile */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.5em;
+  }
+
+  button.click {
+    padding: 10px;
+    font-size: 1em;
+  }
+}
+}
+
+

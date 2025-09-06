@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Quiz HTML</title>
+  <link rel="stylesheet" href="CSS3.css">
+</head>
+
+<body>
+  <h2>🥳Félicitations, vous avez terminé le quiz!
+             🥳
+  </h2>
+  <p id="resultat" style="font-size: 40px;">Chargement...</p>
+  <p id="messageFinal"></p>
+  <script>
+    function afficherScoreTotal() {
+
+const score=
+localStorage.getItem("score");
+
+const resultat=
+document.getElementById("resultat");
+
+const message=
+document.getElementById("messageFinal");
+
+if(!resultat){
+console.error("Élément avec id='resultat'introuvable.");
+return;
+}
+
+if(score===null){
+  resultat.textContent="Aucun score trouvé.";
+  message.textContent="";
+
+}else{
+  resultat.textContent="Ton score total est :"+ score +" points.";
+
+  const scoreNum = Number(score);
+  if (scoreNum>=70){
+    message.textContent +="Incroyable !Tu es un expert du quiz😎.";
+
+  }
+  else if(scoreNum>=60){
+    message.textContent +="Très bon score,bravo!😊";
+  }
+  else if(scoreNum>=30){
+    message.textContent +="Pas mal,tu progresses bien.😉";
+  }
+  else if(scoreNum>=15){
+    message.textContent +="Tu as encore de la marge,continue comme ça .😌";
+  }
+  else{
+    message.textContent += "C'est un début ,persévère !🙂‍↕️"
+  }
+message.style.fontSize="22px";
+message.style.fontFamily="Georgia,serif";
+message.style.color="black";
+message.style.marginTop ="10px";
+}
+    };
+    window.onload = afficherScoreTotal;
+    
+
+  </script>
+  <!-- Bouton Recommencer -->
+  <button class="click" onclick="document.location='D:/Exo HTML/miniprojetz/Quiz HTML .html'">
+    Recommencer
+  </button>
+
+  <!-- Zone des confettis -->
+  <div class="confetti-wrapper">
+    <div class="confetti" style="--hue: 0;"></div>
+    <div class="confetti" style="--hue: 30;"></div>
+    <div class="confetti" style="--hue: 60;"></div>
+    <div class="confetti" style="--hue: 120;"></div>
+    <div class="confetti" style="--hue: 180;"></div>
+    <div class="confetti" style="--hue: 210;"></div>
+    <div class="confetti" style="--hue: 240;"></div>
+    <div class="confetti" style="--hue: 300;"></div>
+    <div class="confetti" style="--hue: 360;"></div>
+  </div>
+<script>
+  console.log("La console fonctionne!!");
+</script>
+</body>
+</html>

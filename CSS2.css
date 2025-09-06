@@ -1,0 +1,81 @@
+/* Style général du body */
+body{
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Style du message d'erreur */
+h2 {
+  font-size: 2.5em;
+  color: #e74c3c; /* Rouge pour signaler l'erreur */
+  margin-bottom: 10px;
+  animation: shake 0.5s ease-in-out; /* Animation de secousse */
+}
+
+/* Texte expliquant la bonne réponse */
+p {
+  font-size: 1.2em;
+  color: #555;
+  margin: 5px;
+}
+
+/* Animation de secousse */
+@keyframes shake {
+  0% { transform: translateX(-10px); }
+  25% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+/* Bouton "Suivant" */
+button.click {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+
+/* Effet hover sur le bouton */
+button.click:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+/* Effet de clic */
+button.click:active {
+  background-color: #1f618d;
+  transform: translateY(1px);
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button.click {
+    padding: 10px;
+    font-size: 1em;
+  }
+}
+

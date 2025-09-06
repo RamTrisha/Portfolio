@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+
+ <body>
+    
+      <header>
+        <nav>
+          <div class="logo">Tsilavina Harivony Trisha <span>RAMANAMANJATO</span></div>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#loisirs">Loisirs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+      <!-- Accueil -->
+      <section id="accueil" class="acc">
+        <div class="acc-texte">
+          <h1>Je suis <span>Trisha</span>, Développeuse en devenir passionnée par l’art du code et l’esthétique du design.</h1>
+          <a href="#projets" class="btn">Voir mes projets</a>
+        </div>
+        <div class="acc-img">
+          <img src="Photo1.jpg" alt="Développement web">
+        </div>
+      </section>
+    
+      <!-- À propos -->
+      <section id="apropos" class="ap">
+        <h2>À propos</h2>
+        <div class="contenu">
+          <div class="ap-texte">
+            <p>Je m'appelle <strong>Trisha</strong>, passionnée par la création de sites web modernes et interactifs.</p>
+            <p>Je suis actuellement étudiante en <span>développement web</span>, et je cherche à améliorer mes compétences en HTML, CSS et JavaScript.</p>
+            <p>J'adore transformer mes idées en projets concrets et expérimenter avec les nouvelles technologies.</p>
+            <div class="cv-btn">
+              <a href="CV.pdf" class="btn">Télécharger mon CV</a>
+            </div>
+            
+          </div>
+          <div class="ap-photo">
+            <img src="Photo2.jpg" alt="Photo de profil">
+          </div>
+        </div>
+      </section>
+    
+      <!-- Projets -->
+      <section id="projets" class="projet">
+        <h2>Mes Projets</h2>
+        <div class="prjt-liste">
+          <div class="prjt-titre">
+            <p>Quiz</p>
+            <p class="tags">#html #css #js</p>
+            <a href="Quiz HTML .html" class="btn">Voir</a>
+          </div>
+          <div class="prjt-titre">
+            <p>Horloge en temps réel</p>
+            <p class="tags">#html #css #js</p>
+            <a href="Temps_réel.html" class="btn">Voir</a>
+          </div>
+          <div class="prjt-titre">
+            <p>Calculateur de prêt hypothécaire</p>
+            <p class="tags">#html #css #js</p>
+            <a href="Calculateur.html" class="btn">Voir</a>
+          </div>
+        </div>
+      </section>
+     
+        
+      <!-- Compétences -->
+      <section id="competences" class="competences">
+        <h2>Mes Compétences</h2>
+        <div class="skills-wrapper">
+        
+          <!-- Compétences Professionnelles -->
+          <div class="skills-box">
+            <h3>Compétences Professionnelles</h3>
+        
+            <div class="skill">
+              <p>HTML</p>
+              <div class="progress-bar">
+                <span style="width: 70%;"></span>
+              </div>
+            </div>
+        
+            <div class="skill">
+              <p>CSS</p>
+              <div class="progress-bar">
+                <span style="width: 55%;"></span>
+              </div>
+            </div>
+        
+            <div class="skill">
+              <p>JavaScript</p>
+              <div class="progress-bar">
+                <span style="width: 60%;"></span>
+              </div>
+            </div>
+        
+            <div class="skill">
+              <p>VS Code</p>
+              <div class="progress-bar">
+                <span style="width: 70%;"></span>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Compétences Personnelles -->
+          <div class="skills-box">
+            <h3>Compétences Personnelles</h3>
+        
+            <div class="skill">
+              <p>Adaptabilité</p>
+              <div class="progress-bar">
+                <span style="width: 75%;"></span>
+              </div>
+            </div>
+        
+            <div class="skill">
+              <p>Créativité</p>
+              <div class="progress-bar">
+                <span style="width: 85%;"></span>
+              </div>
+            </div>
+        
+            <div class="skill">
+              <p>Réceptivité</p>
+              <div class="progress-bar">
+                <span style="width: 75%;"></span>
+              </div>
+            </div>
+        
+            <div class="skill">
+              <p>Organisation</p>
+              <div class="progress-bar">
+                <span style="width: 80%;"></span>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </section>
+
+      <!-- Loisirs -->
+      <section class="loisirs">
+        <h2>Loisirs</h2>
+        <ul class="loisirs-liste">
+          <li>Programmation</li>
+          <li>Jeux vidéo</li>
+          <li>Jeux de stratégies</li>
+          <li>Natation</li>
+        </ul>
+      </section>
+      
+      <!-- Contact -->
+      <section id="contact" class="contact">
+        <h2>Vous avez un projet en tête ?</h2>
+        <p>N’hésitez pas à me <strong>contacter</strong></p>
+        
+        <form action="mailto:tsilavinatrisha28@gmail.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Votre nom" required>
+          <input type="email" name="email" placeholder="Votre email" required>
+          <textarea name="message" placeholder="Votre message" required></textarea>
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-gauche">
+          <p>Designed by<strong><a href="#apropos">Trisha </a></strong>with HTML, CSS, JS</p>
+        </div>
+        <div class="footer-droite">
+          <p>&copy; 2025 - Portfolio</p>
+        </div>
+      </footer>
+    
+    </body>
+    </html>
+    
+</body>
+</html>

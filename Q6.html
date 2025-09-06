@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Quiz HTML</title>
+  <link rel="stylesheet" href="CSS.css">
+    <script>
+    //initialisation
+    window.onload = function(){
+if (localStorage.getItem("score")==null){
+localStorage.setItem("score","0");
+}
+    };
+    function bonneReponse(url){
+      let score =
+      Number(localStorage.getItem("score")) || 0;
+      score+=5;
+      localStorage.setItem("score",score);
+      window.location.href = url;
+    }
+    function mauvaiseReponse(url){
+window.location.href = url;
+    }
+    </script>
+
+</head>
+<body>
+  <div class="Q">
+ <!-- Questions -->
+  <h2>6. Quelle balise est utilisée pour créer une
+liste non ordonnée ?</h2>
+  <button class="click" onclick="mauvaiseReponse('D:/Exo HTML/miniprojetz/A6F.html')">a) &lt;ol&gt;</button>
+  <button class="click" onclick="bonneReponse('D:/Exo HTML/miniprojetz/A6T.html')">b) &lt;ul&gt;</button>
+  <button class="click" onclick="mauvaiseReponse('D:/Exo HTML/miniprojetz/A6F.html')">c) &lt;li&gt;</button>
+  <button class="click" onclick="mauvaiseReponse('D:/Exo HTML/miniprojetz/A6F.html')">d) &lt;list&gt;</button>
+  </div> 
+  </body>
+</html>

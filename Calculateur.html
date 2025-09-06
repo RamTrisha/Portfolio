@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculateur de prêt hypothécaire</title>
+  <link rel="stylesheet" href="Calculateur.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Calculateur de prêt hypothécaire</h2>
+
+    <label>Montant du prêt :</label>
+    <input type="number" id="montant" placeholder="Ex: 100000"><br>
+
+    <label>Taux d'intérêt annuel (%) :</label>
+    <input type="number" id="taux" placeholder="Ex: 5"><br>
+
+    <label>Durée (années) :</label>
+    <input type="number" id="duree" placeholder="Ex: 20"><br>
+
+    <button onclick="calculer()">Calculer</button>
+
+    <p id="resultat"></p>
+  </div>
+
+  <script>
+    function calculer() {
+      let P = parseFloat(document.getElementById("montant").value);
+      let t = parseFloat(document.getElementById("taux").value);
+      let annee = parseInt(document.getElementById("duree").value);
+
+      if (isNaN(P) || P<=0) { alert("Montant invalide"); return; }
+      if (isNaN(t) || t<=0) { alert("Taux invalide"); return; }
+      if (isNaN(annee) || annee<=0) { alert("Durée invalide"); return; }
+
+      let r = (t/100)/12;       // Taux mensuel
+      let n = annee * 12;       // Nombre total de mois
+      let M = P * (r * Math.pow(1+r, n)) / (Math.pow(1+r, n) - 1);
+
+      let coutTotal = M * n;
+      let interets = coutTotal - P;
+
+      document.getElementById("resultat").innerHTML = `
+        Paiement mensuel : ${M.toFixed(2)} € <br>
+        Coût total du prêt : ${coutTotal.toFixed(2)} € <br>
+        Intérêts payés : ${interets.toFixed(2)} €
+      `;
+    }
+  </script>
+</body>
+</html>

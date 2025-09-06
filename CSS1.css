@@ -1,0 +1,73 @@
+/* Style général du body */
+  body{
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+/* Style du message de bonne réponse */
+h2 {
+  font-size: 2.5em;
+  color: #4CAF50; /* Vert pour la réussite */
+  margin-bottom: 20px;
+  animation: pop 0.8s ease;
+}
+
+/* Animation d'apparition du texte */
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Style du bouton "Suivant" */
+button.click {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+
+/* Effet hover sur le bouton */
+button.click:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+/* Effet de clic */
+button.click:active {
+  background-color: #3e8e41;
+  transform: translateY(1px);
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  button.click {
+    padding: 10px;
+    font-size: 1em;
+  }
+}
+

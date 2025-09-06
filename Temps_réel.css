@@ -1,0 +1,27 @@
+/* Centrer tout le contenu de la page */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  h2 {
+    color: black; /* titre en noir */
+    margin-bottom: 20px;
+  }
+  
+  #horloge {
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 20px;
+    border: 2px solid #000;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 150px;
+  }
+  

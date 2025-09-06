@@ -1,0 +1,127 @@
+/* Style général du body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #rgb(180, 180, 170);
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+#fireworks{
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+/* Style du message final */
+h2 {
+  font-size: 2.5em;
+  color: #434244;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Apparition en douceur */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Bouton "Recommencer" */
+button.click {
+  background-color: #a4afb0;
+  color: #333;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin: 10px;
+  width: 80%;
+  max-width: 300px;
+  font-weight: bold;
+}
+
+/* Effet hover sur le bouton */
+button.click:hover {
+  background-color:beige;
+  transform: translateY(-3px);
+}
+
+/* Effet de clic */
+button.click:active {
+  background-color: #b7950b;
+  transform: translateY(1px);
+}
+
+/* --- CONFETTIS --- */
+
+/* Conteneur de confettis */
+.confetti-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Empêche les confettis de bloquer le bouton */
+}
+
+/* Confettis individuels */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: hsl(calc(360 * var(--hue)), 100%, 60%);
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+
+/* Positions aléatoires des confettis */
+.confetti:nth-child(1) { left: 10%; animation-duration: 3s; }
+.confetti:nth-child(2) { left: 20%; animation-duration: 4s; }
+.confetti:nth-child(3) { left: 30%; animation-duration: 2.5s; }
+.confetti:nth-child(4) { left: 40%; animation-duration: 3.5s; }
+.confetti:nth-child(5) { left: 50%; animation-duration: 2s; }
+.confetti:nth-child(6) { left: 60%; animation-duration: 4s; }
+.confetti:nth-child(7) { left: 70%; animation-duration: 3s; }
+.confetti:nth-child(8) { left: 80%; animation-duration: 2.5s; }
+.confetti:nth-child(9) { left: 90%; animation-duration: 3.5s; }
+
+/* Animation de chute des confettis */
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  button.click {
+    padding: 10px;
+    font-size: 1em;
+  }
+}
