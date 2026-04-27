@@ -1,0 +1,90 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #ffffcc;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: #fffacd;
+  border: 2px solid #999;
+  padding: 30px 40px;
+  width: 90%;
+  max-width: 900px;
+  min-height: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+h2 {
+  color: #00008b;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ligne {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.label-inline {
+  width: 100px;
+  font-weight: bold;
+}
+
+label {
+  font-size: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 250px;
+  padding: 5px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+textarea {
+  resize: none;
+}
+
+.erreur {
+  color: red;
+  font-size: 0.9em;
+  margin-left: 10px;
+}
+
+button {
+  padding: 6px 12px;
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #d0d0d0;
+}
+
+.boutons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}

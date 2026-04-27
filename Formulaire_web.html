@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire Client</title>
+  <link rel="stylesheet" href="Formulaire_web.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Client</h2>
+
+    <form id="formulaire">
+      <!-- Civilité -->
+      <div class="ligne">
+        <label class="label-inline"><strong>Civilité :</strong></label>
+        <label><input type="radio" name="civilite" value="Mademoiselle"> Mademoiselle</label>
+        <label><input type="radio" name="civilite" value="Madame"> Madame</label>
+        <label><input type="radio" name="civilite" value="Monsieur"> Monsieur</label>
+      </div>
+
+      <!-- Nom / Prénom -->
+      <div class="ligne">
+        <label for="nom"><strong>Nom / Prénom(s):</strong></label>
+        <input type="text" id="nom" name="nom">
+        <span class="erreur" id="errNom"></span>
+      </div>
+
+      <!-- Adresse -->
+      <div class="ligne">
+        <label for="adresse"><strong>Adresse :</strong></label>
+        <textarea id="adresse" name="adresse" rows="3"></textarea>
+        <span class="erreur" id="errAdresse"></span>
+      </div>
+
+      <!-- No postal / Localité -->
+      <div class="ligne">
+        <label for="postal"><strong>No postal / Localité :</strong></label>
+        <input type="number" id="postal" name="postal" placeholder="ex: 3000">
+        <input type="text" id="localite" name="localite" placeholder="Localité auto" readonly>
+      </div>
+
+      <!-- Pays -->
+      <div class="ligne">
+        <label for="pays"><strong>Pays :</strong></label>
+        <select id="pays" name="pays">
+          <option value="Madagascar">Madagascar</option>
+          <option value="Maroc">Maroc</option>
+          <option value="Japon">Japon</option>
+          <option value="France">France</option>
+        </select>
+
+        <label for="nouveauPays"><strong>Ajouter pays :</strong></label>
+        <input type="text" id="nouveauPays" placeholder="Ex: Égypte">
+        <button type="button" onclick="AjouterPays()">Ajouter pays</button>
+      </div>
+
+      <!-- Plateformes -->
+      <div class="ligne">
+        <label><strong>Plateforme(s) :</strong></label>
+        <input type="checkbox" value="Windows"> Windows
+        <input type="checkbox" value="Macintosh"> Macintosh
+        <input type="checkbox" value="Unix"> Unix
+      </div>
+
+      <!-- Applications -->
+      <div class="ligne">
+        <label for="applications"><strong>Application(s) :</strong></label>
+        <select id="applications" name="applications" multiple size="4">
+          <option value="Bureautique">Bureautique</option>
+          <option value="DAO">DAO</option>
+          <option value="Statistiques">Statistiques</option>
+          <option value="SGBD">SGBD</option>
+          <option value="Internet">Internet</option>
+        </select>
+      </div>
+
+      <!-- Boutons -->
+      <div class="boutons">
+        <button type="button" onclick="AfficherAlert()">Soumettre</button>
+        <button type="button" onclick="VerifierFormulaire()">Vérifier</button>
+        <button type="button" onclick="Enregistrer()">Enregistrer</button>
+        <button type="button" onclick="Recuperer()">Récupérer</button>
+        <button type="reset">Effacer</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="Formulaire_web.js"></script>
+</body>
+</html>
